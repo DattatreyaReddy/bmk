@@ -1,0 +1,15 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    prefer_relative_imports: true
+    directives_ordering: true
+
+analyzer:
+  plugins:
+    - custom_lint
+  exclude:
+    - "**/*.g.dart"
+
+  errors:
+    invalid_annotation_target: ignore
