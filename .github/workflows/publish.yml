@@ -174,7 +174,7 @@ jobs:
       - name: Compress build for macOS
         if: matrix.target == 'macos'
         working-directory: ${{ matrix.build_path }}
-        run: ditto -c -k --sequesterRsrc --keepParent "Yliw.app" "$GITHUB_WORKSPACE/${{ env.pkg_name }}-${{ github.ref_name }}-${{ matrix.target }}-x64.zip"
+        run: ditto -c -k --sequesterRsrc --keepParent "BMK.app" "$GITHUB_WORKSPACE/${{ env.pkg_name }}-${{ github.ref_name }}-${{ matrix.target }}-x64.zip"
 
       # Windows packaging
       - name: Compress build for Windows
