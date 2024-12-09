@@ -1,5 +1,5 @@
 <p align="center">
- <img width=200px height=200px src="assets/images/bmk.png" alt="BMK logo"/>
+ <img width=200px height=200px src="assets/images/bmk_ios.png" alt="BMK logo"/>
 </p>
 
 <h3 align="center"> BMK </h3>

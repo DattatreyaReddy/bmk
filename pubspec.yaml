@@ -59,9 +59,9 @@ flutter_gen:
 
 flutter_native_splash:
   color: "#9b3cfd"
-  image: assets/images/bmk.png
+  image: assets/images/bmk_ios.png
   color_dark: "#9b3cfd"
   android_12:
     color: "#9b3cfd"
     icon_background_color: "#9b3cfd"
-    image: assets/images/bmk.png
+    image: assets/images/bmk_ios.png
