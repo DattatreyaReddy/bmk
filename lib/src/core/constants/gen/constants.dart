@@ -13,5 +13,4 @@ abstract class Constants {
 
   static String latestReleaseApiUrl =
       "https://api.github.com/repos/DattatreyaReddy/bmk/releases/latest";
-
 }
