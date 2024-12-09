@@ -8,6 +8,8 @@ flutter_launcher_icons:
   # adaptive_icon_background: "assets/images/background.png"
   # adaptive_icon_foreground: "assets/images/foreground.png"
   # adaptive_icon_monochrome: "assets/images/monochrome.png"
+  adaptive_icon_background: "#9b3cfd"
+  adaptive_icon_foreground: "assets/images/bmk.png"
 
   ios: true
   # image_path_ios: "assets/images/icon.png"

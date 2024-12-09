@@ -1,5 +1,4 @@
 import 'package:drift/drift.dart';
-import 'package:drift_flutter/drift_flutter.dart';
 
 import '../../commons/utils/dto/color_scheme_dto.dart';
 import '../../feature/bookmarks/domain/bookmarks.dart';
@@ -11,10 +10,8 @@ part 'app_database.g.dart';
 
 @DriftDatabase(tables: [Bookmarks, Collections, CollectionBookmarkMappings])
 class AppDatabase extends _$AppDatabase {
-  AppDatabase() : super(_openConnection());
+  AppDatabase(super.e);
 
   @override
   int get schemaVersion => 1;
-
-  static QueryExecutor _openConnection() => driftDatabase(name: 'bmk');
 }

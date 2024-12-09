@@ -4,12 +4,12 @@ import 'package:package_info_plus/package_info_plus.dart';
 
 import 'src/bmk.dart';
 import 'src/core/controller/core_controller.dart';
-import 'src/core/repository/app_database.dart';
+import 'src/core/repository/db/connection.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  final database = AppDatabase();
+  final database = constructDb();
   final packageInfo = await PackageInfo.fromPlatform();
 
   runApp(
