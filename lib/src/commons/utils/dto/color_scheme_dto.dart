@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
+import '../app_utils.dart';
 import '../extensions/custom_extensions.dart';
 
 class ColorSchemeDto {
@@ -70,7 +71,7 @@ class ColorSchemeDto {
     if (imageUrl.isBlank) return null;
     try {
       ColorScheme scheme = await ColorScheme.fromImageProvider(
-        provider: CachedNetworkImageProvider(imageUrl!),
+        provider: CachedNetworkImageProvider(AppUtils.wrapWithProxy(imageUrl)),
         brightness: brightness,
       );
       return ColorSchemeDto.fromColorScheme(scheme);

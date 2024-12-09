@@ -1,6 +1,5 @@
 import 'package:any_link_preview/any_link_preview.dart';
 import 'package:drift/drift.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -55,9 +54,6 @@ class UpsertBookMarkPopup extends HookConsumerWidget {
             Metadata? metadata = await AnyLinkPreview.getMetadata(
               link: uri.toString(),
               cache: Duration(days: 7),
-              proxyUrl: kIsWeb
-                  ? "https://api.codetabs.com/v1/proxy?quest="
-                  : null, // Need for web
             );
 
             final schemeDtoList = await Future.wait([

@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../commons/utils/app_utils.dart';
 import '../../../commons/utils/dto/color_scheme_dto.dart';
 import '../../../commons/utils/extensions/custom_extensions.dart';
 import '../../../core/repository/app_database.dart';
@@ -41,7 +42,7 @@ class CollectionImageStack extends StatelessWidget {
                   height: 128,
                   width: 128,
                   fit: BoxFit.cover,
-                  imageUrl: bookmarkList?[i].preview.toString() ?? '',
+                  imageUrl: AppUtils.wrapUriWithProxy(bookmarkList?[i].preview),
                   progressIndicatorBuilder: (_, __, ___) => PreviewPlaceHolder(
                     label: bookmarkList?[i].placeholderLabel ?? collection.name,
                     colorScheme: bookmarkList?[i].colorScheme(context),

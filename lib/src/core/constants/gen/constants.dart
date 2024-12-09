@@ -13,4 +13,6 @@ abstract class Constants {
 
   static String latestReleaseApiUrl =
       "https://api.github.com/repos/DattatreyaReddy/bmk/releases/latest";
+
+  static String crossProxy = "https://api.codetabs.com/v1/proxy?quest=";
 }
