@@ -7,7 +7,6 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -165,15 +164,4 @@ abstract class AppUtils {
         desktop: 7,
         largeDesktop: 8,
       );
-  static String wrapUriWithProxy(Uri? url) {
-    if (url == null) return '';
-    if (!kIsWeb) url.toString();
-    return "${Constants.crossProxy}${url.toString()}";
-  }
-
-  static String wrapWithProxy(String? url) {
-    if (url == null) return '';
-    if (!kIsWeb) url.toString();
-    return "${Constants.crossProxy}$url";
-  }
 }

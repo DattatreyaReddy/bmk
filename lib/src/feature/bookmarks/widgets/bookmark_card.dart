@@ -94,7 +94,7 @@ class BookmarkCard extends HookConsumerWidget {
               child: bookmark.preview != null
                   ? CachedNetworkImage(
                       fit: BoxFit.cover,
-                      imageUrl: AppUtils.wrapUriWithProxy(bookmark.preview),
+                      imageUrl: bookmark.preview.toString(),
                       progressIndicatorBuilder: (_, __, ___) =>
                           PreviewPlaceHolder(
                         label: bookmark.placeholderLabel,
