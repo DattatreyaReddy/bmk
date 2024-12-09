@@ -1,6 +1,5 @@
 import 'package:any_link_preview/any_link_preview.dart';
 import 'package:drift/drift.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -10,7 +9,6 @@ import '../../../commons/utils/dto/color_scheme_dto.dart';
 import '../../../commons/utils/extensions/custom_extensions.dart';
 import '../../../commons/utils/toast/toast.dart';
 import '../../../commons/utils/widgets/custom_circular_progress_indicator.dart';
-import '../../../core/constants/gen/constants.dart';
 import '../../../core/controller/core_controller.dart';
 import '../../../core/repository/app_database.dart';
 import '../repository/bookmark_repository.dart';
@@ -56,7 +54,7 @@ class UpsertBookMarkPopup extends HookConsumerWidget {
             Metadata? metadata = await AnyLinkPreview.getMetadata(
               link: uri.toString(),
               cache: Duration(days: 7),
-              proxyUrl: kIsWeb ? Constants.crossProxy : null, // Need for web
+              // proxyUrl: kIsWeb ? Constants.crossProxy : null, // Need for web
             );
 
             final schemeDtoList = await Future.wait([
