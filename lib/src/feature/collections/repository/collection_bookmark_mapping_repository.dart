@@ -39,16 +39,21 @@ extension CollectionBookmarkMappingRepository on AppDatabase {
           .go()) >
       0;
   Stream<List<Bookmark>> watchBookmarksOrderByCollectionId(int collectionId) {
+    final subQuery = Subquery(
+        select(collectionBookmarkMappings)
+          ..where((table) => table.collectionId.equals(collectionId)),
+        'cm');
     final query = select(bookmarks).join([
-      leftOuterJoin(collectionBookmarkMappings,
-          collectionBookmarkMappings.bookmarkId.equalsExp(bookmarks.id),
+      leftOuterJoin(
+          subQuery,
+          subQuery
+              .ref(collectionBookmarkMappings.bookmarkId)
+              .equalsExp(bookmarks.id),
           useColumns: false),
     ]);
-    query.where(collectionBookmarkMappings.collectionId.equals(collectionId) |
-        collectionBookmarkMappings.collectionId.isNull());
     query.orderBy([
       OrderingTerm.asc(
-        collectionBookmarkMappings.createdAt,
+        subQuery.ref(collectionBookmarkMappings.createdAt),
         nulls: NullsOrder.last,
       )
     ]);
