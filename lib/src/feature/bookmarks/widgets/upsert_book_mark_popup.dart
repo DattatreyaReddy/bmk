@@ -55,8 +55,9 @@ class UpsertBookMarkPopup extends HookConsumerWidget {
             Metadata? metadata = await AnyLinkPreview.getMetadata(
               link: uri.toString(),
               cache: Duration(days: 7),
-              proxyUrl:
-                  kIsWeb ? "https://proxy.cors.sh/" : null, // Need for web
+              proxyUrl: kIsWeb
+                  ? "https://api.codetabs.com/v1/proxy?quest="
+                  : null, // Need for web
             );
 
             final schemeDtoList = await Future.wait([
