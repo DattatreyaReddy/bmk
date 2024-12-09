@@ -28,6 +28,14 @@ BMK supports Linux, Windows, MacOS, Web, iOS and Android.
 
 ---
 
+
+<div align="center">
+  <h3> Preview </h3>
+  <img width=360px height=225px style="padding-right:20px" src="assets/demo/demo_1.png" alt="BMK logo"/>
+  <img width=360px height=225px src="assets/demo/demo_2.png" alt="BMK logo"/>
+</div>
+
+
 ## Downloading and Running the app
 
 ### Android
