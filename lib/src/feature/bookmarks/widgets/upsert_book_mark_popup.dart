@@ -56,7 +56,7 @@ class UpsertBookMarkPopup extends HookConsumerWidget {
               link: uri.toString(),
               cache: Duration(days: 7),
               proxyUrl:
-                  kIsWeb ? "https://corsproxy.org/" : null, // Need for web
+                  kIsWeb ? "https://proxy.cors.sh/" : null, // Need for web
             );
 
             final schemeDtoList = await Future.wait([
