@@ -18,7 +18,7 @@ class CollectionListView extends ConsumerWidget {
         return Align(
           alignment: Alignment.centerLeft,
           child: Card(
-            clipBehavior: Clip.hardEdge,
+            clipBehavior: Clip.antiAlias,
             child: InkWell(
               onTap: () => const AddCollectionRoute().go(context),
               child: SizedBox(

@@ -31,7 +31,7 @@ class BookmarkActionTile extends StatelessWidget {
     }
     return Card(
       margin: EdgeInsets.symmetric(vertical: 2),
-      clipBehavior: Clip.hardEdge,
+      clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(
         borderRadius: radius,
       ),

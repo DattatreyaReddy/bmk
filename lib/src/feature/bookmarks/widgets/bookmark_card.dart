@@ -37,7 +37,7 @@ class BookmarkCard extends HookConsumerWidget {
               borderRadius: BorderRadius.circular(12),
             )
           : null,
-      clipBehavior: Clip.hardEdge,
+      clipBehavior: Clip.antiAlias,
       child: AppUtils.wrapChildIf(
         condition: expanded,
         elseWrap: (child) => InkWell(
@@ -61,7 +61,7 @@ class BookmarkCard extends HookConsumerWidget {
           children: [
             child,
             Card.filled(
-              clipBehavior: Clip.hardEdge,
+              clipBehavior: Clip.antiAlias,
               color: colorScheme.onPrimary,
               margin: EdgeInsets.all(6),
               shape: RoundedRectangleBorder(
@@ -89,7 +89,7 @@ class BookmarkCard extends HookConsumerWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
-              clipBehavior: Clip.hardEdge,
+              clipBehavior: Clip.antiAlias,
               color: colorScheme.primary,
               child: bookmark.preview != null
                   ? CachedNetworkImage(

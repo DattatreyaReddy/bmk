@@ -35,7 +35,7 @@ class CollectionImageStack extends StatelessWidget {
             for (int i = (bookmarkList?.length ?? 3) - 1; i >= 0; i--)
               Card.outlined(
                 margin: EdgeInsets.only(left: i * 32),
-                clipBehavior: Clip.hardEdge,
+                clipBehavior: Clip.antiAlias,
                 color: bookmarkList?[i].colorScheme(context).primary,
                 child: CachedNetworkImage(
                   height: 128,

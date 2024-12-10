@@ -18,7 +18,7 @@ class SectionTitleTile extends StatelessWidget {
           Gap(8),
           Expanded(child: Text(title, overflow: TextOverflow.ellipsis)),
           Card.filled(
-            clipBehavior: Clip.hardEdge,
+            clipBehavior: Clip.antiAlias,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             child: InkWell(

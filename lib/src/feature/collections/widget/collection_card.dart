@@ -18,7 +18,7 @@ class CollectionCard extends HookConsumerWidget {
     final colorScheme = bookmarks.valueOrNull?.first.colorScheme(context);
     return Card(
       color: colorScheme?.primaryContainer,
-      clipBehavior: Clip.hardEdge,
+      clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: () => CollectionDetailsRoute(collection.id).go(context),
         child: Padding(
