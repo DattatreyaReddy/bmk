@@ -1,7 +1,0 @@
-#!/usr/bin/dh-exec
-
-data                        opt/bmk/
-lib                         opt/bmk/
-bmk          opt/bmk/
-bmk.png      usr/share/pixmaps/
-bmk.desktop  usr/share/applications/
